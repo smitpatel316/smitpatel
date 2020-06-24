@@ -1,1 +1,12 @@
-<p>skills works!</p>
+<ul class="mdc-image-list my-image-list">
+  <li class="mdc-image-list__item" *ngFor="let name of names">
+    <div class="mdc-image-list__image-aspect-container">
+      <img class="mdc-image-list__image" src="{{ getImagePath(name) }}" />
+    </div>
+    <div class="mdc-image-list__supporting">
+      <span class="mdc-image-list__label" style="color: antiquewhite;">{{
+        name
+      }}</span>
+    </div>
+  </li>
+</ul>
