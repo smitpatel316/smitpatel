@@ -1,0 +1,19 @@
+@import "~@angular/material/theming";
+@import "~angular-mgl-timeline/theme";
+@include mat-core();
+
+/* ======== angular material custom theme ======== */
+$my-custom-primary: mat-palette($mat-orange, 400);
+$my-custom-accent: mat-palette($mat-orange, 50);
+$my-custom-warn: mat-palette($mat-orange, 900);
+
+// Dark theme
+$my-custom-theme: mat-dark-theme(
+  $my-custom-primary,
+  $my-custom-accent,
+  $my-custom-warn
+);
+
+// Main theme defination
+@include angular-material-theme($my-custom-theme);
+@include mgl-timeline-theme($my-custom-theme);
