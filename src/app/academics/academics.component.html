@@ -1,1 +1,39 @@
-<p>academics works!</p>
+<mgl-timeline>
+  <mgl-timeline-entry *ngFor="let entry of entries; let i = index">
+    <mgl-timeline-entry-header>
+      <button
+        mat-raised-button
+        color="primary"
+        style="max-width: 95%; width: 100%;"
+      >
+        {{ entry.header }}
+      </button>
+    </mgl-timeline-entry-header>
+    <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
+    <mgl-timeline-entry-content>
+      <ul style="font-size: medium;">
+        <li *ngFor="let course of entry.courses">
+          <a href="{{ course.link }}" target="_blank">{{ course.name }}</a>
+        </li>
+      </ul>
+    </mgl-timeline-entry-content>
+    <mgl-timeline-entry-side
+      style="color: antiquewhite; text-align: right;"
+      *ngIf="i % 2 === 0"
+      ><mat-card style="margin-top: 1%; margin-left: 10px;">
+        <mat-card-content style="font-size: medium;">
+          {{ entry.side }}
+        </mat-card-content>
+      </mat-card>
+    </mgl-timeline-entry-side>
+    <mgl-timeline-entry-side
+      style="color: antiquewhite; text-align: left;"
+      *ngIf="i % 2 !== 0"
+      ><mat-card style="margin-top: 1%; margin-right: 10px;">
+        <mat-card-content style="font-size: medium;">
+          {{ entry.side }}
+        </mat-card-content>
+      </mat-card>
+    </mgl-timeline-entry-side>
+  </mgl-timeline-entry>
+</mgl-timeline>
