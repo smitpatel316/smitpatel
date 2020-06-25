@@ -1,19 +1,39 @@
 <mat-sidenav-container fxFlexFill class="example-container">
   <mat-sidenav #sidenav fxLayout="column">
     <div fxLayout="column">
-      <button mat-raised-button color="primary" [routerLink]="['/about']">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/about']"
+        (click)="sidenav.toggle()"
+      >
         About
       </button>
       &nbsp;
-      <button mat-raised-button color="primary" [routerLink]="['/experience']">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/experience']"
+        (click)="sidenav.toggle()"
+      >
         Experience
       </button>
       &nbsp;
-      <button mat-raised-button color="primary" [routerLink]="['/skills']">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/skills']"
+        (click)="sidenav.toggle()"
+      >
         Skills
       </button>
       &nbsp;
-      <button mat-raised-button color="primary" [routerLink]="['/academics']">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/academics']"
+        (click)="sidenav.toggle()"
+      >
         Academics
       </button>
       &nbsp;
@@ -22,6 +42,7 @@
         color="primary"
         href="../../assets/Smit_Resume.pdf"
         target="_blank"
+        (click)="sidenav.toggle()"
       >
         Resume
       </a>
