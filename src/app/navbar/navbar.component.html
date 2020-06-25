@@ -1,28 +1,72 @@
-<mat-toolbar color="primary"
-  ><span>Smit Patel</span>
-  <span class="example-spacer"></span>
-  <button mat-raised-button color="primary" [routerLink]="['/about']">
-    About
-  </button>
-  &nbsp;
-  <button mat-raised-button color="primary" [routerLink]="['/experience']">
-    Experience
-  </button>
-  &nbsp;
-  <button mat-raised-button color="primary" [routerLink]="['/skills']">
-    Skills
-  </button>
-  &nbsp;
-  <button mat-raised-button color="primary" [routerLink]="['/academics']">
-    Academics
-  </button>
-  &nbsp;
-  <a
-    mat-raised-button
-    color="primary"
-    href="../../assets/Smit_Resume.pdf"
-    target="_blank"
-  >
-    Resume
-  </a>
-</mat-toolbar>
+<mat-sidenav-container fxFlexFill class="example-container">
+  <mat-sidenav #sidenav fxLayout="column">
+    <div fxLayout="column">
+      <button mat-raised-button color="primary" [routerLink]="['/about']">
+        About
+      </button>
+      &nbsp;
+      <button mat-raised-button color="primary" [routerLink]="['/experience']">
+        Experience
+      </button>
+      &nbsp;
+      <button mat-raised-button color="primary" [routerLink]="['/skills']">
+        Skills
+      </button>
+      &nbsp;
+      <button mat-raised-button color="primary" [routerLink]="['/academics']">
+        Academics
+      </button>
+      &nbsp;
+      <a
+        mat-raised-button
+        color="primary"
+        href="../../assets/Smit_Resume.pdf"
+        target="_blank"
+      >
+        Resume
+      </a>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill fxShow="true" style="padding: 0 !important;">
+    <mat-toolbar color="primary"
+      ><span>Smit Patel</span>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <button mat-raised-button color="primary" [routerLink]="['/about']">
+          About
+        </button>
+        &nbsp;
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/experience']"
+        >
+          Experience
+        </button>
+        &nbsp;
+        <button mat-raised-button color="primary" [routerLink]="['/skills']">
+          Skills
+        </button>
+        &nbsp;
+        <button mat-raised-button color="primary" [routerLink]="['/academics']">
+          Academics
+        </button>
+        &nbsp;
+        <a
+          mat-raised-button
+          color="primary"
+          href="../../assets/Smit_Resume.pdf"
+          target="_blank"
+        >
+          Resume
+        </a>
+      </div>
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a mat-icon-button aria-label="Navbar icon" (click)="sidenav.toggle()">
+          <mat-icon>view_sidebar</mat-icon>
+        </a>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet
+  ></mat-sidenav-content>
+</mat-sidenav-container>

@@ -14,6 +14,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { MatDividerModule } from '@angular/material/divider';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +37,9 @@ import { MatDividerModule } from '@angular/material/divider';
     MatGridListModule,
     MglTimelineModule,
     MatDividerModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
