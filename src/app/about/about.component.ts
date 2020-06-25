@@ -3,13 +3,29 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  breakpoint = 2;
+  colsToRow = '2:1';
+  constructor() {}
 
   ngOnInit(): void {
+    if (window.innerWidth < 950) {
+      this.breakpoint = 1;
+      this.colsToRow = '1:1';
+    } else {
+      this.breakpoint = 2;
+      this.colsToRow = '2:1';
+    }
   }
-
+  onResize(event) {
+    if (event.target.innerWidth < 950) {
+      this.breakpoint = 1;
+      this.colsToRow = '1:1';
+    } else {
+      this.breakpoint = 2;
+      this.colsToRow = '2:1';
+    }
+  }
 }

@@ -2,39 +2,42 @@
   href="https://fonts.googleapis.com/css?family=Neucha&display=swap"
   rel="stylesheet"
 />
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile style="background: transparent;"
+<mat-grid-list
+  [cols]="breakpoint"
+  [rowHeight]="colsToRow"
+  (window:resize)="onResize($event)"
+>
+  <mat-grid-tile
+    style="background: transparent;"
+    [colspan]="breakpoint === 1 ? 1 : breakpoint - 1"
     ><mat-card class="card">
-      <mat-card-content>
-        <p style="font-size: medium;">
-          Hey! I'm Smit! <br /><br />
-          I'm a Software Developer from Toronto, Canada. I'm currently in fourth
-          year of my undergraduate studies in Computer Science at University of
-          Toronto where I had the chance to help run the
-          <a
-            href="https://developers.google.com/community/dsc"
-            style="color: #66ccff;"
-            >Developer Student Clubs</a
-          >
-          as VP of Technology. <br /><br />
-          I've had the opportunity to have completed a variety internships in
-          Software Engineering in my undergraduate years! I have previously
-          interned at Royal Bank of Canada, and Interac Corp. I am always
-          looking for new opportunities to connect with people and gain valuable
-          experience!
-          <br /><br />
+      <mat-card-content style="font-size: medium;">
+        Hey! I'm Smit! <br /><br />
+        I'm a Software Developer from Toronto, Canada. I'm currently in fourth
+        year of my undergraduate studies in Computer Science at University of
+        Toronto where I had the chance to help run the
+        <a
+          href="https://developers.google.com/community/dsc"
+          style="color: #66ccff;"
+          >Developer Student Clubs</a
+        >
+        as VP of Technology. <br /><br />
+        I've had the opportunity to have completed a variety internships in
+        Software Engineering in my undergraduate years! I have previously
+        interned at Royal Bank of Canada, and Interac Corp. I am always looking
+        for new opportunities to connect with people and gain valuable
+        experience!
+        <br /><br />
 
-          Thank you for taking the time to visit my website, I hope you learn
-          more about myself and hope to get in touch through any preferred
-          mediums!
-        </p>
+        Thank you for taking the time to visit my website, I hope you learn more
+        about myself and hope to get in touch through any preferred mediums!
       </mat-card-content>
     </mat-card></mat-grid-tile
   >
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="breakpoint === 1 ? 1 : breakpoint - 1">
     <img src="../../assets/about/utoronto.png" alt="University of Toronto Logo"
   /></mat-grid-tile>
-  <mat-grid-tile [colspan]="2">
+  <mat-grid-tile [colspan]="breakpoint">
     <div>
       <img
         src="../../assets/about/toronto_skyline.png"
