@@ -1,3 +1,7 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Neucha&display=swap"
+  rel="stylesheet"
+/>
 <mat-grid-list cols="2" rowHeight="2:1">
   <mat-grid-tile style="background: transparent;"
     ><mat-card class="card">
@@ -31,6 +35,40 @@
     <img src="../../assets/about/utoronto.png" alt="University of Toronto Logo"
   /></mat-grid-tile>
   <mat-grid-tile [colspan]="2">
-    <img src="../../assets/about/toronto_skyline.png" alt="Toronto Skyline"
-  /></mat-grid-tile>
+    <div>
+      <img
+        src="../../assets/about/toronto_skyline.png"
+        alt="Toronto Skyline"
+        style="display: block; margin-left: auto; margin-right: auto;"
+      />
+      <br />
+      <mat-divider
+        style="
+          border-color: black;
+          border-style: solid;
+          border-width: 100%;
+          width: 100%;
+        "
+      ></mat-divider>
+      <div style="margin: auto; text-align: center;">
+        <a
+          mat-icon-button
+          aria-label="Github icon"
+          href="https://github.com/smitpatel316"
+          target="_blank"
+        >
+          <img src="../../assets/about/github.svg" />
+        </a>
+        &nbsp;
+        <a
+          mat-icon-button
+          aria-label="LinkedIn icon"
+          href="https://www.linkedin.com/in/smit-p-973971129"
+          target="_blank"
+        >
+          <img src="../../assets/about/linkedin.png" />
+        </a>
+      </div>
+    </div>
+  </mat-grid-tile>
 </mat-grid-list>

@@ -9,11 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AcademicsComponent } from './academics/academics.component';
-import { ResumeComponent } from './resume/resume.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MglTimelineModule } from 'angular-mgl-timeline';
+import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,6 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
     ExperienceComponent,
     SkillsComponent,
     AcademicsComponent,
-    ResumeComponent,
     NavbarComponent,
   ],
   imports: [
@@ -33,6 +32,7 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
     MatCardModule,
     MatGridListModule,
     MglTimelineModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
