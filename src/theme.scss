@@ -3,9 +3,9 @@
 @include mat-core();
 
 /* ======== angular material custom theme ======== */
-$my-custom-primary: mat-palette($mat-orange, 400);
-$my-custom-accent: mat-palette($mat-orange, 50);
-$my-custom-warn: mat-palette($mat-orange, 900);
+$my-custom-primary: mat-palette($mat-grey, 900);
+$my-custom-accent: mat-palette($mat-grey, 50);
+$my-custom-warn: mat-palette($mat-red, 900);
 
 // Dark theme
 $my-custom-theme: mat-dark-theme(
