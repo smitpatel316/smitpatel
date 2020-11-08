@@ -19,6 +19,50 @@ interface Entry {
 export class AcademicsComponent implements OnInit {
   entries: Entry[] = [
     {
+      header: 'Winter 2021',
+      side: 'January 2021 - April 2021',
+      courses: [
+        {
+          name: 'CSCD01: Engineering Large Software Systems',
+          link: 'https://utsc.calendar.utoronto.ca/course/CSCD01H3',
+        },
+        {
+          name: 'CSCC09: Programming on the Web',
+          link: 'https://utsc.calendar.utoronto.ca/course/CSCC09H3',
+        },
+        {
+          name: 'CSCC63: Computability and Computational Complexity',
+          link: 'https://utsc.calendar.utoronto.ca/course/CSCC63H3',
+        },
+      ],
+    },
+    {
+      header: 'Fall 2020',
+      side: 'September 2020 - December 2020',
+      courses: [
+        {
+          name: 'CSCC73: Algorithm Design and Analysis',
+          link: 'https://utsc.calendar.utoronto.ca/course/cscc73h3',
+        },
+        {
+          name: 'CSCC43: Introduction to Databases',
+          link: 'https://utsc.calendar.utoronto.ca/course/cscc43h3',
+        },
+        {
+          name: 'CSCC46: Social and Information Networks',
+          link: 'https://utsc.calendar.utoronto.ca/course/cscc46H3',
+        },
+        {
+          name: 'CSCC11: Introduction to Machine Learning and Data Mining',
+          link: 'https://utsc.calendar.utoronto.ca/course/CSCC11H3',
+        },
+        {
+          name: 'CSC367: Parallel Programming',
+          link: 'https://fas.calendar.utoronto.ca/course/csc367h1',
+        },
+      ],
+    },
+    {
       header: 'Summer 2020',
       side: 'May 2020 - August 2020',
       courses: [
