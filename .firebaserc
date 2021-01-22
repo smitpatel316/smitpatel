@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "smitpatel-8c028"
+  },
+  "targets": {
+    "smitpatel-8c028": {
+      "hosting": {
+        "smitpatel": [
+          "smitpatel-8c028"
+        ]
+      }
+    }
+  }
+}
