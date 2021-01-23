@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "smitpatel",
       "public": "dist",
       "ignore": [
         "firebase.json",
